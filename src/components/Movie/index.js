@@ -65,6 +65,7 @@ const StyledMovie = styled.div `
 
   .movie__description {
     padding: 0 5%;
+    margin-bottom: 95px;
 
     p {
       margin-top: 0;

@@ -6,7 +6,10 @@ const StyledSettings = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 5%;
+  padding: 8% 5%;
+  position: fixed;
+  z-index: 90;
+  bottom: 0;
 
   .btn {
     background-color: #EA9F95;
