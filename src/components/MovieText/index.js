@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const StyledMovieText = styled.div`
   margin-top: 150px;
@@ -31,6 +32,10 @@ const MovieText = (props) => {
   } else {
     return(null);
   }
+}
+
+MovieText.propTypes = {
+  showResult: PropTypes.bool
 }
 
 export default MovieText;

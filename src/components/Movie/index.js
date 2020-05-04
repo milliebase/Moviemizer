@@ -67,7 +67,7 @@ const StyledMovie = styled.div `
     padding: 5%;
 
     p {
-      margin-top: 0;
+      margin: 0;
     }
   }
 

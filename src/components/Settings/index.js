@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
 
 const StyledSettings = styled.section`
   width: 100vw;
@@ -59,6 +60,10 @@ const Settings = (props) => {
       </form>
     </StyledSettings>
   );
+}
+
+Settings.propTypes = {
+  handleSubmit: PropTypes.func
 }
 
 export default Settings;
