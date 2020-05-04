@@ -6,6 +6,8 @@ import Settings from './components/Settings';
 import MovieText from './components/MovieText';
 import Movie from './components/Movie';
 
+import icon from './assets/images/moviemizer_icon.png';
+
 const apiKey = process.env.REACT_APP_API_KEY;
 
 function App() {
@@ -65,7 +67,7 @@ function App() {
 
         {movie.id && (
           <Movie
-            backdrop = {config + movie.backdrop_path}
+            backdrop = {(movie.backdrop_path) ? config + movie.backdrop_path : icon}
             title = {movie.title}
             year = {movie.release_date.substr(0, movie.release_date.indexOf('-'))}
             rating = {movie.vote_average}
