@@ -29,6 +29,16 @@ const StyledSettings = styled.section`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: 600px) {
+    padding: 3%;
+
+    .btn {
+      width: 30%;
+      height: 60px;
+
+    }
+  }
 `;
 
 const Settings = (props) => {

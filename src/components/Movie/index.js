@@ -64,8 +64,7 @@ const StyledMovie = styled.div `
   }
 
   .movie__description {
-    padding: 0 5%;
-    margin-bottom: 95px;
+    padding: 5%;
 
     p {
       margin-top: 0;
@@ -76,6 +75,7 @@ const StyledMovie = styled.div `
     display: flex;
     flex-flow: row wrap;
     padding: 5%;
+    margin-bottom: 95px;
 
     p {
       display: inline-block;
@@ -90,6 +90,53 @@ const StyledMovie = styled.div `
     }
   }
 
+  @media (min-width: 600px) {
+    .movie__backdrop {
+      height: 680px;
+
+      img {
+        height: 100%;
+        object-position: 40%;
+      }
+    }
+
+    .movie__info {
+      img {
+        width: 350px;
+      }
+
+      .movie__details {
+        width: max-content;
+
+        h1 {
+          font-size: 40px;
+          line-height: 40px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .movie__description {
+      padding-left: 500px;
+      margin-top: -450px;
+      height: 400px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .genre {
+      p {
+        font-size: 14px;
+        padding: 1%;
+        margin-right: 8px;
+      }
+    }
+  }
 `;
 
 const Movie = (props) => {
@@ -125,6 +172,10 @@ const Movie = (props) => {
         </div>
       </div>
 
+      <div className="movie__description">
+        <p>{props.description}</p>
+      </div>
+
       <div className="genre">
         {props.genres.map((genre, key) => {
           listGenres.forEach(item => {
@@ -135,10 +186,6 @@ const Movie = (props) => {
 
           return (<p key={key}>{genre}</p>)
         })}
-      </div>
-
-      <div className="movie__description">
-        <p>{props.description}</p>
       </div>
     </StyledMovie>
   )

@@ -12,6 +12,10 @@ const StyledMovieText = styled.div`
   h2 {
     font-weight: normal;
   }
+
+  @media (min-width: 600px) {
+    margin-top: 200px;
+  }
 `;
 
 const MovieText = (props) => {

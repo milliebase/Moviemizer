@@ -51,7 +51,7 @@ function App() {
       fetch(`https://api.themoviedb.org/3/configuration?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((json) => {
-        let configObj = json.images.base_url + json.images.backdrop_sizes[1];
+        let configObj = json.images.base_url + json.images.backdrop_sizes[3];
         setConfig(configObj);
       })
   }, [])

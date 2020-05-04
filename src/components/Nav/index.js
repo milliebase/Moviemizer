@@ -23,6 +23,12 @@ const StyledNav = styled.div`
     padding-top: 5%;
     width: 40%;
   }
+
+  @media (min-width: 600px) {
+    img {
+      width: 20%;
+    }
+  }
 `;
 
 const Nav = () => {
