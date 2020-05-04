@@ -1,6 +1,5 @@
 # Moviemizer
 
-<img src="/src/assets/images/moviemizer.png" width="100%">
 <img src="/src/assets/images/mobile.png" width="100%">
 <img src="/src/assets/images/desktop.png" width="100%">
 
