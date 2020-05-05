@@ -21,7 +21,14 @@ const StyledMovie = styled.div `
     &--gradient {
       width: 100%;
       height: inherit;
-      background: linear-gradient(0deg, rgba(0,0,0,1) 18%, rgba(0,0,0,0.396796218487395) 43%, rgba(255,255,255,0) 53%, rgba(255,255,255,0) 57%, rgba(0,0,0,0.41360294117647056) 78%, rgba(0,0,0,0.8253676470588236) 97%);
+      background: linear-gradient(
+        0deg,
+        rgba(0,0,0,1) 18%,
+        rgba(0,0,0,0.396796218487395) 43%,
+         rgba(255,255,255,0) 53%,
+         rgba(255,255,255,0) 57%,
+         rgba(0,0,0,0.41360294117647056) 78%,
+         rgba(0,0,0,0.8253676470588236) 97%);
       background-blend-mode: darken;
       position: absolute;
       z-index: 10;

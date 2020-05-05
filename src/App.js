@@ -51,7 +51,7 @@ function App() {
       fetch(`https://api.themoviedb.org/3/configuration?api_key=${apiKey}`)
       .then((res) => res.json())
       .then((json) => {
-        let configObj = json.images.base_url + json.images.backdrop_sizes[3];
+        let configObj = json.images.secure_base_url + json.images.backdrop_sizes[3];
         setConfig(configObj);
       })
   }, [])
@@ -62,8 +62,6 @@ function App() {
 
       <section className="movie__holder">
         <MovieText showResult={showResult} />
-
-        {/* {console.log(movie)} */}
 
         {movie.id && (
           <Movie
@@ -83,12 +81,6 @@ function App() {
           (e) => {
             e.preventDefault();
             setCount(count+1);
-
-            // const data = new FormData(e.target)
-
-            // for (let pair of data.entries()) {
-            //   setGenre(pair[1]);
-            // }
           }
       } />
     </div>
