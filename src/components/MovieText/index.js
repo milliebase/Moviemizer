@@ -25,7 +25,7 @@ const StyledMovieText = styled.div`
 
   .icon {
     width: 100%;
-    height: 40vh;
+    height: 35vh;
     overflow: hidden;
   }
 
