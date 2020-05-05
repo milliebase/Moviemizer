@@ -19,9 +19,10 @@ const StyledSettings = styled.section`
     height: 44px;
     border: none;
     border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: normal;
     text-transform: uppercase;
+    font-family: 'Passion One', cursive;
   }
 
   .genre__form {
