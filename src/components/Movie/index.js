@@ -42,6 +42,7 @@ const StyledMovie = styled.div `
 
     img {
       width: 100px;
+      height: 100%;
       border-radius: 10px;
     }
 
