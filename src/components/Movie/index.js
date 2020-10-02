@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const apiKey = process.env.REACT_APP_API_KEY;
 
-const StyledMovie = styled.div `
+const StyledMovie = styled.div`
   width: 100%;
   height: 100%;
 
@@ -23,12 +23,13 @@ const StyledMovie = styled.div `
       height: inherit;
       background: linear-gradient(
         0deg,
-        rgba(0,0,0,1) 18%,
-        rgba(0,0,0,0.396796218487395) 43%,
-         rgba(255,255,255,0) 53%,
-         rgba(255,255,255,0) 57%,
-         rgba(0,0,0,0.41360294117647056) 78%,
-         rgba(0,0,0,0.8253676470588236) 97%);
+        rgba(0, 0, 0, 1) 18%,
+        rgba(0, 0, 0, 0.396796218487395) 43%,
+        rgba(255, 255, 255, 0) 53%,
+        rgba(255, 255, 255, 0) 57%,
+        rgba(0, 0, 0, 0.41360294117647056) 78%,
+        rgba(0, 0, 0, 0.8253676470588236) 97%
+      );
       background-blend-mode: darken;
       position: absolute;
       z-index: 10;
@@ -151,17 +152,19 @@ const Movie = (props) => {
   const [listGenres, setListGenres] = React.useState([]);
 
   React.useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`)
-    .then((res) => res.json())
-    .then((json) => {
-      if (json.genres) {
-        setListGenres(json.genres);
-      }
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }, [])
+    fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.genres) {
+          setListGenres(json.genres);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <StyledMovie className="movie">
@@ -174,9 +177,14 @@ const Movie = (props) => {
         <img src={props.poster} alt={props.posterText} />
 
         <div className="movie__details">
-          <h1>{props.title} <span>({props.year})</span></h1>
+          <h1>
+            {props.title} <span>({props.year})</span>
+          </h1>
 
-          <p><span>Rating: </span>{props.rating}</p>
+          <p>
+            <span>Rating: </span>
+            {props.rating}
+          </p>
         </div>
       </div>
 
@@ -186,18 +194,18 @@ const Movie = (props) => {
 
       <div className="genre">
         {props.genres.map((genre, key) => {
-          listGenres.forEach(item => {
+          listGenres.forEach((item) => {
             if (item.id === genre) {
-              genre = item.name
+              genre = item.name;
             }
           });
 
-          return (<p key={key}>{genre}</p>)
+          return <p key={key}>{genre}</p>;
         })}
       </div>
     </StyledMovie>
-  )
-}
+  );
+};
 
 Movie.propTypes = {
   backdrop: PropTypes.string,
@@ -205,7 +213,7 @@ Movie.propTypes = {
   poster: PropTypes.string,
   posterText: PropTypes.string,
   genres: PropTypes.array,
-  rating: PropTypes.number
-}
+  rating: PropTypes.number,
+};
 
 export default Movie;
