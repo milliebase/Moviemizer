@@ -8,6 +8,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - use: actions/setup-node@v1
+      - uses: actions/setup-node@v1
       - run: npm install
       - run: npm prettier
