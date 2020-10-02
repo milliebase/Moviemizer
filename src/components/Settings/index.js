@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const StyledSettings = styled.section`
@@ -13,7 +13,7 @@ const StyledSettings = styled.section`
   bottom: 0;
 
   .btn {
-    background-color: #EA9F95;
+    background-color: #ea9f95;
     color: white;
     width: 60%;
     height: 44px;
@@ -22,7 +22,7 @@ const StyledSettings = styled.section`
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
-    font-family: 'Passion One', cursive;
+    font-family: "Passion One", cursive;
   }
 
   .genre__form {
@@ -38,7 +38,6 @@ const StyledSettings = styled.section`
     .btn {
       width: 30%;
       height: 60px;
-
     }
   }
 `;
@@ -49,7 +48,6 @@ const Settings = (props) => {
       {/* <h2>Pick a genre!</h2> */}
 
       <form className="genre__form" onSubmit={props.handleSubmit}>
-
         {/* {genres.map((item, key) => (
           <label key={key}>
             <input type="radio" name={item.name} value={item.id} />
@@ -57,14 +55,16 @@ const Settings = (props) => {
           </label>
         ))} */}
 
-        <button type="submit" className="btn">Moviemize</button>
+        <button type="submit" className="btn">
+          Moviemize
+        </button>
       </form>
     </StyledSettings>
   );
-}
+};
 
 Settings.propTypes = {
-  handleSubmit: PropTypes.func
-}
+  handleSubmit: PropTypes.func,
+};
 
 export default Settings;

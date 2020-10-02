@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import logo from './../../assets/images/moviemizer.png';
+import logo from "./../../assets/images/moviemizer.png";
 
 const StyledNav = styled.div`
   width: 100%;
@@ -13,9 +13,10 @@ const StyledNav = styled.div`
   top: 0;
   background: linear-gradient(
     0deg,
-   rgba(255,255,255,0) 2%,
-   rgba(255,255,255,0) 12%,
-   rgba(0,0,0,1) 86%);
+    rgba(255, 255, 255, 0) 2%,
+    rgba(255, 255, 255, 0) 12%,
+    rgba(0, 0, 0, 1) 86%
+  );
   backdrop-filter: blur(0.4);
 
   img {
@@ -34,9 +35,9 @@ const StyledNav = styled.div`
 const Nav = () => {
   return (
     <StyledNav>
-      <img src={logo} alt="Moviemizer logo"/>
+      <img src={logo} alt="Moviemizer logo" />
     </StyledNav>
   );
-}
+};
 
 export default Nav;

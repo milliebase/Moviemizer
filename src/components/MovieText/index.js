@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
 
-import icon from './../../assets/images/moviemizer_icon.png';
+import icon from "./../../assets/images/moviemizer_icon.png";
 
 const StyledMovieText = styled.div`
   padding-top: 20vh;
@@ -14,12 +14,12 @@ const StyledMovieText = styled.div`
   h1 {
     text-transform: uppercase;
     font-size: 40px;
-    font-family: 'Passion One', cursive;
+    font-family: "Passion One", cursive;
     padding: 0 8%;
   }
 
   h2 {
-    font-family: 'Passion One', cursive;
+    font-family: "Passion One", cursive;
     font-weight: normal;
   }
 
@@ -53,14 +53,14 @@ const MovieText = (props) => {
           <img src={icon} alt="Moviemizer icon" />
         </div>
       </StyledMovieText>
-    )
+    );
   } else {
-    return(null);
+    return null;
   }
-}
+};
 
 MovieText.propTypes = {
-  showResult: PropTypes.bool
-}
+  showResult: PropTypes.bool,
+};
 
 export default MovieText;
